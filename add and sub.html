@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset class="bij">
+      <label for="num1" class="xyz">enter first number</label><br />
+      <input type="number" id="num1" /><br />
+      <label for="num2">enter second number</label><br />
+      <input type="number" id="num2" /><br />
+      <button id="add">+</button>
+      <button id="su">-</button><br /><br />
+      <input type="number" id="result" />
+      <button id="set">reset</button>
+      <button id="dd">mod</button>
+    </fieldset>
+    <script>
+      const g = document.querySelector(".xyz");
+
+      const h = document.getElementsByTagName("label");
+      const a = document.getElementById("num1");
+      const b = document.getElementById("num2");
+      const c = document.getElementById("add");
+      const abc = document.getElementById("result");
+      const set = document.getElementById("set");
+      const ff = document.getElementById("dd");
+      g.style.color = "yellow";
+      c.addEventListener("click", bijay);
+      function bijay() {
+        const sum = Number(a.value) + Number(b.value);
+        abc.value = sum;
+      }
+      su.addEventListener("click", bijay1);
+      function bijay1() {
+        const sub = parseFloat(a.value) - parseFloat(b.value);
+        document.getElementById("result").value = sub;
+      }
+      set.addEventListener("click", function kha() {
+        a.value = "";
+        b.value = "";
+        abc.value = "";
+        // abc.textContent = "";
+      });
+      ff.addEventListener("click", kha);
+      function kha() {
+        const mod = parseFloat(a.value) % parseFloat(b.value);
+        abc.value = mod;
+      }
+      a.style.color = "red";
+      h.style.color = "green";
+    </script>
+  </body>
+</html>

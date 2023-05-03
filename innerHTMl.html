@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using .innerHTML</title>
+  </head>
+  <body>
+    <button onclick="addContent()">Add content</button>
+    <div id="content"></div>
+
+    <script>
+      function addContent() {
+        document.getElementById("content").innerHTML = "<p>Hello, world!</p>";
+      }
+    </script>
+  </body>
+</html>

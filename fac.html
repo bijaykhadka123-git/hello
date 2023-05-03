@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Factorial Calculator</title>
+      </head>
+      <body>
+        <h1>Factorial Calculator</h1>
+        <p>Enter a number to calculate its factorial:</p>
+        <input type="text" id="numberInput" placeholder="Enter a number" />
+        <button id="cc">Calculate</button>
+        <p id="result"></p>
+
+        <script>
+          const x = document.getElementById("cc");
+          x.addEventListener("click", bij);
+          function bij() {
+            // Get the input value
+            const number = parseInt(
+              document.getElementById("numberInput").value
+            );
+
+            // Calculate the factorial
+            let factorial = 1;
+            for (let i = 2; i <= number; i++) {
+              factorial *= i;
+            }
+
+            //Display the result
+            document.getElementById(
+              "result"
+            ).textContent = `The factorial  is ${factorial}.`;
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="number1" /><br />
+    <input type="text" id="number2" /><br />
+    <input type="button" value="sum" onclick="bijay()" />
+    <div id="op"></div>
+    <script>
+      function bijay() {
+        var c = document.getElementById("number1").value;
+        var d = document.getElementById("number2").value;
+        var v = parseInt(c) + parseInt(d);
+        document.getElementById("op").innerHTML = v;
+      }
+    </script>
+  </body>
+</html>
